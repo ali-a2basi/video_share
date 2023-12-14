@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('video_share', function (Blueprint $table) {
-            $table->string('slug', 128);
+        Schema::table('videos', function (Blueprint $table) {
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('video_share', function (Blueprint $table) {
-            $table->dropColumn('slug');
+        Schema::table('videos', function (Blueprint $table) {
+            $table->dropColumn('updated_at');
         });
     }
 };

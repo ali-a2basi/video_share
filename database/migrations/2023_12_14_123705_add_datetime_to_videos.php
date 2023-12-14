@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('video_share', function (Blueprint $table) {
-            $table->string('description');
+        Schema::table('videos', function (Blueprint $table) {
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -21,8 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('video_share', function (Blueprint $table) {
-            $table->dropColumn('description');
+        Schema::table('videos', function (Blueprint $table) {
+            $table->dropColumn('created_at');
         });
     }
 };

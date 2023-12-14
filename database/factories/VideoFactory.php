@@ -16,13 +16,17 @@ class VideoFactory extends Factory
      */
     public function definition(): array
     {
+        $persianFaker = \Faker\Factory::create('fa_IR');// create a persian faker
         return [
-            'name' => fake()->name(),
-            'slug' => fake()->slug(),
-            'email_verified_at' => now(),
-            'updated_at' => now()
+            'name' => $persianFaker->name(),
+            'url' => $this->faker->imageUrl(640, 480, 'animals'),
+            'lenght' => 120,
+            'slug' =>$this->faker->slug(),
+            'updated_at' => now(),
+            'description' => $persianFaker->realText()
 
-            
+
+            //
         ];
     }
 }

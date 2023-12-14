@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('video_share', function (Blueprint $table) {
+        Schema::create('videos', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 256);
-            $table->string('url');
-            $table->integer('lengh');
-            $table->timestamps();
-        });
+            $table->string('name');
+            $table->text('url');
+            $table->integer('lenght');
+            $table->string('description');
+            $table->string('slug');
+
+         });
     }
 
     /**
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('video_share');
+        Schema::dropIfExists('videos');
     }
 };

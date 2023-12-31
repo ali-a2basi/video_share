@@ -24,7 +24,7 @@ class VideoFactory extends Factory
             'slug' =>$this->faker->slug(),
             'updated_at' => now(),
             'description' => $persianFaker->realText(),
-            'thumbnail' => 'https://loremflickr.com/320/240?random='.rand(1, 99)
+            'thumbnail' => "https://loremflickr.com/320/240?random=".rand(1, 88)
 
 
             //

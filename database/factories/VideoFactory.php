@@ -20,7 +20,7 @@ class VideoFactory extends Factory
         $persianFaker = \Faker\Factory::create('fa_IR');// create a persian faker
         return [
             'name' => $persianFaker->name(),
-            'url' => $this->faker->imageUrl(640, 480, 'animals'),
+            'url' => $this->faker->imageUrl(640, 480, 'gadgets'),
             'lenght' => 120,
             'slug' =>$this->faker->slug(),
             'updated_at' => now(),

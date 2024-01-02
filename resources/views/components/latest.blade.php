@@ -1,14 +1,15 @@
-@extends('layout')
-@section('content')
-<x-latest></x-latest>
+<h1 class="new-video-title"><i class="fa fa-bolt"></i> آخرین ویدیو‌ها</h1>
+            <div class="row">
 
-        @foreach($mostPopularVideos as $video)
-                <div class="col-lg-2 col-md-4 col-sm-6">
+                <!-- video-item -->
+
+                @foreach($videos as $video)
+                <div class="col-lg-2 col-md-4 col-sm-6 ">
                     <div class="video-item">
                         <div class="thumb">
                             <div class="hover-efect"></div>
                             <small class="time">{{$video->created_at}}</small>
-                            <a href="#"><img src="{{$video->thumbnail}}" alt=""></a>
+                            <a href=""><img src= "{{$video->thumbnail}}" alt=""></a>
                         </div>
                         <div class="video-info">
                             <a href="#" class="title">{{$video->name}}</a>
@@ -19,12 +20,11 @@
                         </div>
                     </div>
                 </div>
-                @endforeach   
 
-@endsection
-
-
+                @endforeach     
+  
 
 
 
-
+            <h1 class="new-video-title"><i class="fa fa-bolt"></i> پربازدیدترین ویدیوها</h1>
+        <div class="row">

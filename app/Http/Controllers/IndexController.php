@@ -15,13 +15,7 @@ class IndexController extends Controller
         $mostPopularVideos = Video::all()->random(6);
         $mostViewedVideos = Video::all()->random(6);
         
-        return view('index', [
-            'videos' => $videos,
-            'mostPopularVideos' => $mostPopularVideos,
-            'mostViewedVideos' => $mostViewedVideos
-        ]);
-
-        // return view('index', compact('videos', 'mostPopularVideos', 'mostViewedVideos'));
+        return view('index', compact('mostPopularVideos', 'mostViewedVideos'));
 
 
     }
